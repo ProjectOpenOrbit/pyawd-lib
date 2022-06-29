@@ -12,7 +12,6 @@ See awaytools.com
 ## TODOs
 * Unit testing
 * Support for precision levels other than float32
-* Make the project packageable
 
 ## Purpose for OpenOrbit
 
