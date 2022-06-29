@@ -9,6 +9,11 @@ See awaytools.com
 * No AWD writing, there are official tools for that
 * Decoding of mesh instances, normals and UV coordinates
 
+## TODOs
+* Unit testing
+* Support for precision levels other than float32
+* Make the project packageable
+
 ## Purpose for OpenOrbit
 
 DarkOrbit stores its 3D models as AWD files on their servers and download them when the client starts.
