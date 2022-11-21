@@ -15,7 +15,7 @@ See awaytools.com
 
 ## Purpose for OpenOrbit
 
-DarkOrbit stores its 3D models as AWD files on their servers and download them when the client starts.
+DarkOrbit distributes their 3D models as AWD files on web servers. The game client downloads them on demand.
 AWD files are uncommon and thus are unusable in Unity, Blender, Unreal, etc.
 
 This library is used to convert the AWD files to a more common format such as OBJ, so we can use the 3D models in Unity.
