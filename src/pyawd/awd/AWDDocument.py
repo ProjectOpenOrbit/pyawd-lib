@@ -31,11 +31,11 @@ def decompress_body(data: IO, length: int, compression_type: CompressionType) ->
 def decode_body(data: IO):
     blocks = {}
     while True:
-        block, header = AWDBlock.decode(data)
-        if block is None:
+        body, header = AWDBlock.decode(data)
+        if body is None:
             break
-        logger.debug(block)
-        blocks[header.block_id] = [header, block]
+        logger.debug(body)
+        blocks[header.block_id] = [header, body]
     return blocks
 
 

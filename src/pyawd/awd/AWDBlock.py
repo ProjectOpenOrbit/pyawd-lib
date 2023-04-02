@@ -3,7 +3,7 @@ from typing import IO
 
 from pyawd.PyAwdConfig import ENDIANNESS
 from pyawd.PyAwdLogger import logger
-from blocks import BLOCK_DATA_TYPES, TriangleGeometryBlock, MeshInstanceBlock, MetaDataBlock, NamespaceBlock
+from .blocks import BLOCK_DATA_TYPES, TriangleGeometryBlock, MeshInstanceBlock, MetaDataBlock, NamespaceBlock
 
 
 class AwdBlockHeader:
