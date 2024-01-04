@@ -60,7 +60,7 @@ def convert_to_obj(path_to_input_file, path_to_output_file):
     file = open(path_to_input_file, 'rb')
     document = AWDDocument.decode(file)
     filename = os.path.splitext(os.path.basename(file.name))[0]
-    output_string = f"o {filename}\n"
+    output_string = f""
     for block_id in document.blocks:
         header, block = document.blocks[block_id]
         if isinstance(block, MeshInstanceBlock):
@@ -69,7 +69,7 @@ def convert_to_obj(path_to_input_file, path_to_output_file):
                 logger.error(f"Could not parse mesh '{filename}' because of this error: {block_body}")
                 raise RuntimeError()
             lookup_name = block.scene_header.lookup_name
-            output_string += f"g {lookup_name}\n"
+            output_string += f"o {lookup_name}\n"
             output_string += build_obj(block_body)
     o = open(path_to_output_file, 'w')
     o.write(output_string)
@@ -119,3 +119,4 @@ def main():
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     main()
+    input("Drücke Enter, um die Konsole zu schließen.")
